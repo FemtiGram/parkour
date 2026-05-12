@@ -49,7 +49,7 @@ export function AuthScreen() {
           Verify your identity
         </h1>
         <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
-          We use BankID and Vipps to verify who you are — this protects both you
+          We use BankID and Vipps to verify who you are - this protects both you
           and the people you rent to.
         </p>
       </div>

@@ -77,7 +77,7 @@ export function ReviewScreen() {
           rows={[
             {
               label: "Address",
-              value: listing.address || "—",
+              value: listing.address || "-",
             },
             {
               label: "Space type",
@@ -89,7 +89,7 @@ export function ReviewScreen() {
             },
             {
               label: "Access notes",
-              value: listing.accessNotes.trim() || "—",
+              value: listing.accessNotes.trim() || "-",
             },
           ]}
         />
@@ -102,7 +102,7 @@ export function ReviewScreen() {
               label: "Available from",
               value: listing.startDate
                 ? format(listing.startDate, "d MMM yyyy")
-                : "—",
+                : "-",
             },
             {
               label: "Until",
@@ -120,7 +120,7 @@ export function ReviewScreen() {
             },
             {
               label: "Payouts",
-              value: `${listing.payoutFrequency} · ${listing.bankAccount || "—"}`,
+              value: `${listing.payoutFrequency} · ${listing.bankAccount || "-"}`,
             },
           ]}
         />
@@ -147,7 +147,7 @@ export function ReviewScreen() {
             },
             {
               label: "Extra notes",
-              value: listing.extraNotes.trim() || "—",
+              value: listing.extraNotes.trim() || "-",
             },
           ]}
         />

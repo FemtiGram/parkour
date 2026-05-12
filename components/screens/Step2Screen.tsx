@@ -46,7 +46,7 @@ export function Step2Screen() {
                 Long-term rental
               </p>
               <p className="text-xs text-[var(--color-text-secondary)] mt-1 leading-relaxed">
-                Monthly bookings only — short-term and hourly rentals are coming
+                Monthly bookings only - short-term and hourly rentals are coming
                 soon.
               </p>
             </div>
@@ -99,7 +99,7 @@ export function Step2Screen() {
           />
           {listing.monthlyPrice > 0 && (
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed mt-0.5">
-              Parkour keeps 10% — you receive{" "}
+              Parkour keeps 10% - you receive{" "}
               <span className="font-semibold text-[var(--color-text-primary)]">
                 kr {formatKr(Math.round(listing.monthlyPrice * 0.9))}
               </span>{" "}
@@ -110,7 +110,7 @@ export function Step2Screen() {
 
         <Field
           label="Bank account for payouts"
-          hint="Payments are sent automatically on the 1st of each month. You may need to declare this as income — check skatteetaten.no."
+          hint="Payments are sent automatically on the 1st of each month. You may need to declare this as income - check skatteetaten.no."
         >
           <Input
             leftIcon={<Building2 size={18} />}
@@ -149,7 +149,7 @@ export function Step2Screen() {
           onClick={() => navigate("step-3")}
           disabled={!canContinue}
         >
-          Next — Your terms
+          Next - Your terms
         </Button>
       </div>
     </div>

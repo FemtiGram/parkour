@@ -115,7 +115,7 @@ export function HomeWithListingsScreen() {
           </div>
         </section>
 
-        {/* First notification — slides in once you arrive on the dashboard */}
+        {/* First notification - slides in once you arrive on the dashboard */}
         <section className="px-5 mt-5 animate-fade-up">
           <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-2">
             New notification

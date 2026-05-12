@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Parkour — The simple way to rent out your parking space",
+  title: "Parkour - The simple way to rent out your parking space",
   description:
     "Peer-to-peer parking. Verified renters, automatic payments, no awkward conversations.",
 };

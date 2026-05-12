@@ -44,7 +44,7 @@ export function Step4Screen() {
             <div className="absolute top-3 left-3">
               <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 text-xs font-semibold text-[var(--color-success)]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-success)] animate-pulse" />
-                Active — open for bookings
+                Active - open for bookings
               </span>
             </div>
           </div>

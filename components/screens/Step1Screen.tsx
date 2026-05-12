@@ -74,7 +74,7 @@ export function Step1Screen() {
         <Field
           label="Any access instructions?"
           optional
-          hint="Helpful for renters — gate codes, where to find the spot, etc."
+          hint="Helpful for renters - gate codes, where to find the spot, etc."
         >
           <Textarea
             placeholder="e.g. Spot #14 in the basement, gate code 1234"
@@ -90,7 +90,7 @@ export function Step1Screen() {
           onClick={() => navigate("step-2")}
           disabled={!canContinue}
         >
-          Next — Availability &amp; price
+          Next - Availability &amp; price
         </Button>
       </div>
     </div>
