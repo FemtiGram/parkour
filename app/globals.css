@@ -34,7 +34,7 @@
 
 html,
 body {
-  background: #0c1a2e;
+  background: var(--color-bg);
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -48,13 +48,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #060f1e 0%, #122849 100%);
+  background: var(--color-bg);
   padding: 0;
 }
 
 .device-frame {
   width: 100%;
-  max-width: 390px;
   min-height: 100dvh;
   background: var(--color-bg);
   position: relative;
@@ -64,11 +63,17 @@ body {
 }
 
 @media (min-width: 768px) {
+  html,
+  body {
+    background: #0c1a2e;
+  }
   .device-stage {
     padding: 32px;
+    background: linear-gradient(135deg, #060f1e 0%, #122849 100%);
   }
   .device-frame {
     width: 390px;
+    max-width: 390px;
     min-height: 844px;
     height: 844px;
     max-height: calc(100dvh - 64px);
