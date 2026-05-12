@@ -1,6 +1,7 @@
 "use client";
 
 import { Check, Share2 } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { useApp } from "@/lib/state";
 import { formatKr } from "@/lib/utils";
@@ -40,7 +41,14 @@ export function Step4Screen() {
 
         {/* Listing summary card */}
         <div className="rounded-2xl bg-white border border-[var(--color-border)] overflow-hidden animate-fade-up delay-3">
-          <div className="aspect-[16/9] bg-gradient-to-br from-[#3b5b85] via-[#5b7aa8] to-[#1a3a6e] relative">
+          <div className="aspect-[16/9] relative">
+            <Image
+              src="/parking/parkingplace.png"
+              alt="Your parking spot"
+              fill
+              sizes="(max-width: 390px) 100vw, 390px"
+              className="object-cover"
+            />
             <div className="absolute top-3 left-3">
               <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 text-xs font-semibold text-[var(--color-success)]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-success)] animate-pulse" />

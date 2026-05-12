@@ -7,6 +7,7 @@ import {
   Plus,
   Sparkles,
 } from "lucide-react";
+import Image from "next/image";
 import { Logo } from "@/components/Logo";
 import { BottomNav } from "@/components/BottomNav";
 import { Button } from "@/components/ui/Button";
@@ -174,7 +175,14 @@ export function HomeWithListingsScreen() {
           </div>
 
           <div className="rounded-2xl bg-white border border-[var(--color-border)] overflow-hidden">
-            <div className="aspect-[16/9] bg-gradient-to-br from-[#3b5b85] via-[#5b7aa8] to-[#1a3a6e] relative">
+            <div className="aspect-[16/9] relative">
+              <Image
+                src="/parking/parkingplace.png"
+                alt={listing.address || "Your parking spot"}
+                fill
+                sizes="(max-width: 390px) 100vw, 390px"
+                className="object-cover"
+              />
               <div className="absolute top-3 left-3">
                 <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 text-xs font-semibold text-[var(--color-success)]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-success)] animate-pulse" />

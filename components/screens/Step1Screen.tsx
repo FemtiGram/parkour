@@ -1,6 +1,7 @@
 "use client";
 
 import { Camera, MapPin } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { StepHeader } from "@/components/ui/StepHeader";
 import { Button } from "@/components/ui/Button";
@@ -42,11 +43,20 @@ export function Step1Screen() {
             className="w-full aspect-[16/10] rounded-2xl border-2 border-dashed border-[var(--color-border)] hover:border-[var(--color-primary-400)] bg-[var(--color-surface)] flex flex-col items-center justify-center gap-2 text-[var(--color-text-secondary)] transition relative overflow-hidden"
           >
             {photoChosen ? (
-              <div className="absolute inset-0 bg-gradient-to-br from-[#3b5b85] via-[#5b7aa8] to-[#1a3a6e] flex items-end p-4">
-                <div className="bg-white/95 backdrop-blur rounded-lg px-3 py-1.5 text-xs font-medium text-[var(--color-text-primary)] flex items-center gap-2">
-                  <Camera size={14} /> {listing.photoLabel}
+              <>
+                <Image
+                  src="/parking/parkingplace.png"
+                  alt="Your parking spot"
+                  fill
+                  sizes="(max-width: 390px) 100vw, 390px"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 flex items-end p-4">
+                  <div className="bg-white/95 backdrop-blur rounded-lg px-3 py-1.5 text-xs font-medium text-[var(--color-text-primary)] flex items-center gap-2">
+                    <Camera size={14} /> {listing.photoLabel}
+                  </div>
                 </div>
-              </div>
+              </>
             ) : (
               <>
                 <div className="w-12 h-12 rounded-full bg-[var(--color-primary-100)] inline-flex items-center justify-center text-[var(--color-primary-500)]">
