@@ -60,7 +60,7 @@ export function RoleScreen() {
         </button>
       </div>
 
-      <div className="mt-auto pt-8 text-center flex flex-col gap-3">
+      <div className="mt-auto pt-8 text-center">
         <p className="text-sm text-[var(--color-text-secondary)]">
           Already have an account?{" "}
           <button
@@ -70,13 +70,6 @@ export function RoleScreen() {
             Sign in
           </button>
         </p>
-        <button
-          type="button"
-          onClick={() => navigate("home-empty")}
-          className="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)] underline-offset-4 hover:underline"
-        >
-          Skip onboarding
-        </button>
       </div>
     </div>
   );
