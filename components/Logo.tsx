@@ -1,36 +1,31 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type Props = {
   size?: "sm" | "md" | "lg";
+  variant?: "full" | "mark";
   className?: string;
 };
 
-export function Logo({ size = "sm", className }: Props) {
-  const sizes = {
-    sm: { box: "w-7 h-7", text: "text-base", radius: 6 },
-    md: { box: "w-10 h-10", text: "text-3xl", radius: 8 },
-    lg: { box: "w-14 h-14", text: "text-3xl", radius: 12 },
-  } as const;
-  const s = sizes[size];
+const HEIGHTS = { sm: 28, md: 40, lg: 56 } as const;
+
+export function Logo({ size = "sm", variant = "full", className }: Props) {
+  const h = HEIGHTS[size];
+  const isFull = variant === "full";
+  const w = isFull ? Math.round((h * 300) / 123) : Math.round((h * 109) / 123);
+  const src = isFull
+    ? "/logo/parkour_full_logo.png"
+    : "/logo/parkour_logo_simple.png";
+
   return (
-    <div className={cn("inline-flex items-center gap-2", className)}>
-      <div
-        className={cn(
-          "inline-flex items-center justify-center bg-[var(--color-primary-500)] text-white font-bold",
-          s.box,
-        )}
-        style={{ borderRadius: s.radius }}
-      >
-        <span className="font-display">P</span>
-      </div>
-      <span
-        className={cn(
-          "font-display font-semibold tracking-tight text-[var(--color-text-primary)]",
-          s.text,
-        )}
-      >
-        parkour
-      </span>
-    </div>
+    <Image
+      src={src}
+      width={w}
+      height={h}
+      alt="Parkour"
+      priority={size === "lg"}
+      className={cn("select-none", className)}
+      style={{ height: h, width: w }}
+    />
   );
 }
