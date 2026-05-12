@@ -65,6 +65,7 @@ export function RoleScreen() {
           Already have an account?{" "}
           <button
             type="button"
+            onClick={() => navigate("home-empty")}
             className="text-[var(--color-primary-500)] font-semibold hover:underline"
           >
             Sign in

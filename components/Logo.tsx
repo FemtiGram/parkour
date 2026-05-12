@@ -23,7 +23,7 @@ export function Logo({ size = "sm", variant = "full", className }: Props) {
       width={w}
       height={h}
       alt="Parkour"
-      priority={size === "lg"}
+      priority
       className={cn("select-none", className)}
       style={{ height: h, width: w }}
     />
