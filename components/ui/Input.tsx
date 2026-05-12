@@ -12,24 +12,24 @@ type FieldProps = {
 
 export function Field({ label, hint, optional, children }: FieldProps) {
   return (
-    <label className="flex flex-col gap-1.5">
+    <div className="flex flex-col gap-1.5">
       {label && (
-        <span className="text-sm font-medium text-[var(--color-text-primary)] flex items-center justify-between">
+        <div className="text-sm font-medium text-[var(--color-text-primary)] flex items-center justify-between">
           <span>{label}</span>
           {optional && (
             <span className="text-xs text-[var(--color-text-tertiary)] font-normal">
               Optional
             </span>
           )}
-        </span>
+        </div>
       )}
       {children}
       {hint && (
-        <span className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+        <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
           {hint}
-        </span>
+        </p>
       )}
-    </label>
+    </div>
   );
 }
 
