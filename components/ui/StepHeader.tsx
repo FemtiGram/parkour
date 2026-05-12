@@ -22,7 +22,8 @@ export function StepHeader({ step, total, title }: Props) {
   };
 
   return (
-    <header className="px-5 pt-4 pb-3 bg-[var(--color-bg)] sticky top-0 z-10">
+    <>
+      <header className="px-5 pt-4 pb-3 bg-[var(--color-bg)] sticky top-0 z-10">
       <div className="flex items-center gap-3 mb-3">
         <button
           type="button"
@@ -65,6 +66,8 @@ export function StepHeader({ step, total, title }: Props) {
         })}
       </div>
 
+      </header>
+
       <ConfirmDialog
         open={confirmOpen}
         onClose={() => setConfirmOpen(false)}
@@ -75,6 +78,6 @@ export function StepHeader({ step, total, title }: Props) {
         cancelLabel="Keep editing"
         destructive
       />
-    </header>
+    </>
   );
 }
