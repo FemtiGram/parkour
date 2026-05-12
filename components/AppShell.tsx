@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { AppProvider, useApp } from "@/lib/state";
 import { SplashScreen } from "@/components/screens/SplashScreen";
 import { RoleScreen } from "@/components/screens/RoleScreen";
@@ -20,6 +21,14 @@ import {
 
 function ScreenSwitch() {
   const { screen, toast } = useApp();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.querySelectorAll<HTMLElement>(".scroll-area").forEach((el) => {
+      el.scrollTop = 0;
+    });
+  }, [screen]);
+
   return (
     <>
       <div key={screen} className="flex-1 min-h-0 flex flex-col animate-fade-in">
