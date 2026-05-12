@@ -1,16 +1,19 @@
 "use client";
 
 import { ChevronLeft, ShieldCheck } from "lucide-react";
+import Image from "next/image";
 import { useApp } from "@/lib/state";
 
 function VippsMark() {
   return (
-    <span
-      className="inline-flex items-center font-bold text-base"
-      style={{ fontFamily: "var(--font-display)" }}
-    >
-      vipps
-    </span>
+    <Image
+      src="/logo/brand.png"
+      alt="Vipps"
+      width={64}
+      height={18}
+      priority
+      className="h-[18px] w-auto select-none"
+    />
   );
 }
 
@@ -60,16 +63,16 @@ export function AuthScreen() {
           onClick={() => navigate("vipps-confirm")}
           className="bg-[var(--color-vipps)] text-white rounded-xl px-5 min-h-14 inline-flex items-center justify-center gap-3 font-semibold text-base hover:brightness-95 active:brightness-90 transition"
         >
+          <span>Log in with</span>
           <VippsMark />
-          <span>Continue with Vipps</span>
         </button>
         <button
           type="button"
           onClick={() => navigate("bankid-verify")}
           className="bg-[var(--color-bankid)] text-white rounded-xl px-5 min-h-14 inline-flex items-center justify-center gap-3 font-semibold text-base hover:brightness-110 active:brightness-95 transition"
         >
+          <span>Log in with</span>
           <BankIDMark />
-          <span>Continue with BankID</span>
         </button>
       </div>
 
