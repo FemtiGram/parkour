@@ -1,7 +1,6 @@
 "use client";
 
 import { ChevronLeft, ShieldCheck } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 import { useApp } from "@/lib/state";
 
 function VippsMark() {
@@ -72,16 +71,6 @@ export function AuthScreen() {
           <BankIDMark />
           <span>Continue with BankID</span>
         </button>
-
-        <div className="text-center mt-2">
-          <Button
-            variant="ghost"
-            onClick={() => navigate("home-empty")}
-            className="min-h-11 text-sm"
-          >
-            Skip for now
-          </Button>
-        </div>
       </div>
 
       <div className="mt-auto">
