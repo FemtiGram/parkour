@@ -8,7 +8,7 @@ export function SplashScreen() {
   const { replace } = useApp();
 
   useEffect(() => {
-    const t = setTimeout(() => replace("role"), 1600);
+    const t = setTimeout(() => replace("role"), 3000);
     return () => clearTimeout(t);
   }, [replace]);
 
